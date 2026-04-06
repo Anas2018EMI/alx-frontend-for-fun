@@ -208,13 +208,15 @@
                   <label for="email" class="visually-hidden"></label>
                   <input
                     class="form-control"
+                    autocomplete="email"
                     id="email"
-                    type="text"
+                    type="email"
                     name="email"
-                    placeholder="Enter Email Address"
+                    required
+                    aria-required="true"
                   />
                   <div class="input-group-btn">
-                    <a class="btn" type="submit">Validate</a>
+                    <button class="btn" type="submit">Validate</button>
                   </div>
                 </div>
               </form>
