@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --chosen-font-size: 1rem;
+  --strip-height: 3px;
+  font-size: var(--chosen-font-size);
+  position: absolute;
+}
+
+a {
+  color: #d73953;
+  text-decoration: none;
+}
+
+h2 a::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--chosen-font-size) + 10px);
+  width: 0;
+  height: var(--strip-height);
+  background-color: #d73953;
+  transition: 0.3s cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+h2 a:hover::before {
+  width: 5ch;
+}
