@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  margin: 5rem;
+  text-align: center;
+}
+
+.menu .menu-open {
+  display: none;
+}
+
+.menu-item {
+  display: none;
+}
+
+.menu-open:checked ~ .menu-item {
+  display: block;
+}
+
+.menu-open-button {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #c91414;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.menu-open-button:hover {
+  width: 60px;
+  height: 60px;
+}
+
+.menu-open:checked + .menu-open-button:hover {
+  width: 50px;
+  height: 50px;
+}
+
+.menu-open-button .menu-line {
+  display: block;
+  width: 1.2rem;
+  height: 0.1rem;
+  position: relative;
+  top: 25px;
+  left: 15px;
+  background: white;
+  transition: all 0.2s ease-out;
+}
+.menu-open-button .menu-line-1 {
+  top: 22px;
+}
+
+.menu-open-button .menu-line-3 {
+  top: 28px;
+}
+
+.menu-open-button:hover .menu-line {
+  width: 1.44rem;
+  height: 0.24rem;
+  top: 25px;
+  left: 18px;
+}
+
+.menu-open-button:hover .menu-line-1 {
+  top: 21px;
+}
+
+.menu-open-button:hover .menu-line-3 {
+  top: 30px;
+}
+
+.menu-open:checked ~ .menu-open-button .menu-line-1,
+.menu-open:checked ~ .menu-open-button:hover .menu-line-3 {
+  transform: rotate(-45deg);
+  width: 1.2rem;
+  height: 0.1rem;
+  top: 25px;
+  left: 15px;
+}
+.menu-open:checked ~ .menu-open-button .menu-line-2 {
+  display: none;
+}
+.menu-open:checked ~ .menu-open-button .menu-line-3,
+.menu-open:checked ~ .menu-open-button:hover .menu-line-3 {
+  transform: rotate(45deg);
+  width: 1.2rem;
+  height: 0.1rem;
+  top: 23px;
+  left: 15px;
+}
+
+.menu .menu-item {
+  width: 50px;
+  height: 50px;
+  background-color: #c91414;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+.menu .menu-item:hover {
+  background-color: white;
+  border: solid 1px #c91414;
+}
+
+.menu .menu-item .fa {
+  font-size: 1.2rem;
+  position: relative;
+  /* left: 14px; */
+  top: 16px;
+  color: white;
+}
+
+.menu .menu-item:hover .fa {
+  color: #c91414;
+}
